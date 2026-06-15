@@ -1,0 +1,40 @@
+{
+    "name": "Meblex",
+    "shortName": "Meblex",
+    "description": "Projektujemy i tworzymy luksusowe meble na wymiar w Szczecinie. Kuchnie w stylu Japandi, nowoczesne garderoby, rzemieślnicza precyzja.",
+    "url": "https://meblex.szczecin.pl",
+    "language": "pl",
+    "author": "Meblex",
+    "seo": {
+        "title": "Meblex | Nowoczesne meble na wymiar Szczecin",
+        "description": "Projektujemy i tworzymy autorskie meble na wymiar. Kuchnie, garderoby i zabudowy premium w Szczecinie i okolicach.",
+        "keywords": [
+            "meble na wymiar",
+            "meble Szczecin",
+            "kuchnie na wymiar",
+            "szafy wnękowe",
+            "garderoby",
+            "Meblex"
+        ],
+        "image": "/og-image.jpg",
+        "robots": "index, follow",
+        "themeColor": "#1c1a17",
+        "type": "website",
+        "openGraph": {
+            "title": "Meblex | Nowoczesne meble na wymiar Szczecin",
+            "description": "Luksusowe meble na wymiar, tworzone z pasją w Szczecinie.",
+            "site_name": "Meblex",
+            "locale": "pl_PL"
+        }
+    },
+    "contact": {
+        "email": "kontakt@meblex.szczecin.pl",
+        "phone": "+48 500 123 456",
+        "address": "ul. Storrady-Świętosławy 2, 71-602 Szczecin",
+        "city": "Szczecin"
+    },
+    "socials": {
+        "facebook": "https://facebook.com/meblexszczecin",
+        "instagram": "https://instagram.com/meblexszczecin"
+    }
+}
