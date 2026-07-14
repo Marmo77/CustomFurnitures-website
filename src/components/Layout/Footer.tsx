@@ -1,18 +1,30 @@
 import React from "react";
 import { companyData } from "../../data/siteData";
-import { Compass, Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
+import {
+  Compass,
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { navigateToAddigital } from "@/src/lib/utils";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
 
-  const scrollToSection = (id: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToSection = (
+    id: string,
+    e: React.MouseEvent<HTMLAnchorElement>,
+  ) => {
     e.preventDefault();
-    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
-    
+    const isHomePage =
+      window.location.pathname === "/" || window.location.pathname === "";
+
     if (!isHomePage) {
-      navigate('/');
+      navigate("/");
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -33,10 +45,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#1c1a17] text-stone-400 font-sans border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
-        
         {/* Company Column */}
         <div className="md:col-span-5 flex flex-col space-y-6">
-          <a href="#start" onClick={(e) => scrollToSection("start", e)} className="flex items-center space-x-2 w-max cursor-pointer">
+          <a
+            href="#start"
+            onClick={(e) => scrollToSection("start", e)}
+            className="flex items-center space-x-2 w-max cursor-pointer"
+          >
             <div className="flex h-10 w-10 items-center justify-center bg-background text-foreground rounded-sm">
               <Compass className="h-5 w-5 stroke-[1.5]" />
             </div>
@@ -50,22 +65,23 @@ export default function Footer() {
             </div>
           </a>
           <p className="text-sm text-stone-400 max-w-sm leading-relaxed">
-            Tworzymy nieszablonowe i trwałe meble na wymiar. Łączymy nowoczesny minimalizm 
-            z pasją do naturalnego drewna i tradycją szczecińskiego rzemiosła.
+            Tworzymy nieszablonowe i trwałe meble na wymiar. Łączymy nowoczesny
+            minimalizm z pasją do naturalnego drewna i tradycją szczecińskiego
+            rzemiosła.
           </p>
           <div className="flex items-center space-x-4">
-            <a 
-              href={companyData.socials.instagram} 
-              target="_blank" 
+            <a
+              href={companyData.socials.instagram}
+              target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 flex items-center justify-center border border-white/10 hover:border-white/30 text-stone-300 hover:text-white transition-all duration-300"
               style={{ borderRadius: "0.2rem" }}
             >
               <Instagram className="h-4 w-4" />
             </a>
-            <a 
-              href={companyData.socials.facebook} 
-              target="_blank" 
+            <a
+              href={companyData.socials.facebook}
+              target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 flex items-center justify-center border border-white/10 hover:border-white/30 text-stone-300 hover:text-white transition-all duration-300"
               style={{ borderRadius: "0.2rem" }}
@@ -82,17 +98,29 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3.5 text-sm">
             <li>
-              <a href="#start" onClick={(e) => scrollToSection("start", e)} className="hover:text-white transition-colors duration-300 cursor-pointer">
+              <a
+                href="#start"
+                onClick={(e) => scrollToSection("start", e)}
+                className="hover:text-white transition-colors duration-300 cursor-pointer"
+              >
                 O nas
               </a>
             </li>
             <li>
-              <a href="#realizacje" onClick={(e) => scrollToSection("realizacje", e)} className="hover:text-white transition-colors duration-300 cursor-pointer">
+              <a
+                href="#realizacje"
+                onClick={(e) => scrollToSection("realizacje", e)}
+                className="hover:text-white transition-colors duration-300 cursor-pointer"
+              >
                 Nasze realizacje
               </a>
             </li>
             <li>
-              <a href="#kontakt" onClick={(e) => scrollToSection("kontakt", e)} className="hover:text-white transition-colors duration-300 cursor-pointer">
+              <a
+                href="#kontakt"
+                onClick={(e) => scrollToSection("kontakt", e)}
+                className="hover:text-white transition-colors duration-300 cursor-pointer"
+              >
                 Darmowy pomiar i kontakt
               </a>
             </li>
@@ -111,13 +139,19 @@ export default function Footer() {
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-stone-400 shrink-0 stroke-[1.5]" />
-              <a href={`tel:${companyData.phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors duration-300">
+              <a
+                href={`tel:${companyData.phone.replace(/\s+/g, "")}`}
+                className="hover:text-white transition-colors duration-300"
+              >
                 {companyData.phone}
               </a>
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-stone-400 shrink-0 stroke-[1.5]" />
-              <a href={`mailto:${companyData.email}`} className="hover:text-white transition-colors duration-300 break-all">
+              <a
+                href={`mailto:${companyData.email}`}
+                className="hover:text-white transition-colors duration-300 break-all"
+              >
                 {companyData.email}
               </a>
             </li>
@@ -128,13 +162,25 @@ export default function Footer() {
             <p>{companyData.workingHours.weekend}</p>
           </div>
         </div>
-
       </div>
 
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500">
-          <p>© {currentYear} {companyData.name}. Wszystkie prawa zastrzeżone.</p>
-          <p className="mt-2 sm:mt-0 font-mono">Projekt & rzemiosło z dbałością o każdy słój.</p>
+          <p>
+            © {currentYear} {companyData.name}. Wszystkie prawa zastrzeżone.
+          </p>
+          <div className="flex text-sm justify-center items-end gap-1">
+            <p>Strona stworzona przez</p>
+            <span
+              className="font-bold text-primary cursor-pointer hover:underline underline-offset-3"
+              onClick={navigateToAddigital}
+            >
+              Addigital
+            </span>
+          </div>
+          <p className="mt-2 sm:mt-0 font-mono">
+            Projekt & rzemiosło z dbałością o każdy słój.
+          </p>
         </div>
       </div>
     </footer>

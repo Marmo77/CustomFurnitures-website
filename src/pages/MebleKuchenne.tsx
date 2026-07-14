@@ -16,7 +16,6 @@ export default function MebleKuchenne() {
   ];
 
   const images = [
-    "https://images.unsplash.com/photo-1556910103-1c02745a8740?w=1600&h=900&fit=crop",
     "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&h=800&fit=crop",
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=800&fit=crop",
     "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&h=800&fit=crop",
@@ -24,7 +23,7 @@ export default function MebleKuchenne() {
   ];
 
   return (
-    <SubPageLayout 
+    <SubPageLayout
       title="Meble kuchenne"
       subtitle="Królowa domu"
       description="Kuchnia to serce każdego domu. Głęboko wierzymy, że ergonomia powinna iść w parze z doskonałym designem. Projektujemy i produkujemy funkcjonalne kuchnie na wymiar, które zachwycają formą."
