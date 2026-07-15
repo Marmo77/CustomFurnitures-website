@@ -5,5 +5,5 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 export const navigateToAddigital = () => {
-  window.open("https://addigital.vercel.app/", "_blank", "noopener,noreferrer");
+  window.open("https://www.addigital.pl", "_blank", "noopener,noreferrer");
 };
